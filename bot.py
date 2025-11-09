@@ -13,10 +13,11 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ]
 
     reply_markup = InlineKeyboardMarkup(keyboard)
-    await update.message.reply_text("Выберите действие:", reply_markup=reply_markup)
+    await update.message.reply_text("Отсоси писюльку:", reply_markup=reply_markup)
 
 app = ApplicationBuilder().token(TOKEN).build()
 app.add_handler(CommandHandler("start", start))
 
 print("✅ Бот запущен...")
 app.run_polling()
+
